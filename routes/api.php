@@ -76,7 +76,11 @@ Route::group(['prefix' => 'orders'], function () {
 
     Route::post('/', 'ShoppingCartController@createOrder');
     Route::get('/inCustomer', 'ShoppingCartController@getCustomerOrders');
-    Route::get('/:order_id', 'ShoppingCartController@getOrderSummary');
+    Route::get('/{order_id}', 'ShoppingCartController@getOrderSummary');
 });
 
 Route::post('/stripe/charge', 'ShoppingCartController@processStripePayment');
+
+
+Route::get('/tax', 'TaxController@getAllTax');
+Route::get('/tax/{tax_id}', 'TaxController@getTaxById');
