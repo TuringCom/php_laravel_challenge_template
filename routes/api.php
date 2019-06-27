@@ -60,3 +60,23 @@ Route::group(['prefix' => 'categories'], function () {
 
 Route::get('/shipping/regions', 'ShippingController@getShippingRegions');
 Route::get('/shipping/regions/{shipping_region_id}', 'ShippingController@getShippingType');
+
+
+
+Route::group(['prefix' => 'shoppingcart'], function () {
+    Route::get('/generateUniqueId', 'ShoppingCartController@generateUniqueCart');
+    Route::post('/add', 'ShoppingCartController@addItemToCart');
+    Route::get('/{cart_id}', 'ShoppingCartController@getCart');
+    Route::put('/update/{item_id}', 'ShoppingCartController@updateCartItem');
+    Route::delete('/empty/{cart_id}', 'ShoppingCartController@emptyCart');
+    Route::delete('/removeProduct/{item_id}', 'ShoppingCartController@removeItemFromCart');
+});
+
+Route::group(['prefix' => 'orders'], function () {
+
+    Route::post('/', 'ShoppingCartController@createOrder');
+    Route::get('/inCustomer', 'ShoppingCartController@getCustomerOrders');
+    Route::get('/:order_id', 'ShoppingCartController@getOrderSummary');
+});
+
+Route::post('/stripe/charge', 'ShoppingCartController@processStripePayment');
