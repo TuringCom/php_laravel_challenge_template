@@ -35,3 +35,24 @@ Route::put('/customer/creditCard', 'CustomerController@updateCreditCard');
 
 
 
+Route::group(['prefix' => 'products'], function () {
+    Route::get('/', 'ProductController@toString');
+    Route::get('/{product_id}', 'ProductController@getProduct');
+    Route::get('/search', 'ProductController@searchProduct');
+    Route::get('/inCategory/{category_id}', 'ProductController@getProductsByCategory');
+    Route::get('/inDepartment/{department_id}', 'ProductController@getProductsInDepartment');
+});
+
+
+Route::group(['prefix' => 'departments'], function () {
+    Route::get('/', 'ProductController@getAllDepartments');
+    Route::get('/{department_id}', 'ProductController@getDepartment');
+
+});
+
+Route::group(['prefix' => 'categories'], function () {
+    Route::get('/', 'ProductController@getAllCategories');
+    Route::get('/{category_id}', 'ProductController@toString');
+    Route::get('/inDepartment/{category_id}', 'ProductController@getDepartmentCategories');
+
+});
