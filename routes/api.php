@@ -28,9 +28,10 @@ Route::group(['prefix' => 'attributes'], function () {
 
 Route::post('/customers', 'CustomerController@updateCreditCard');
 Route::post('/customers/login', 'CustomerController@login');
+Route::get('/customer', 'CustomerController@getCustomerProfile');
+Route::put('/customer', 'CustomerController@apply');
+Route::put('/customer/address', 'CustomerController@updateCustomerAddress');
+Route::put('/customer/creditCard', 'CustomerController@updateCreditCard');
 
-Route::get('/customers', 'CustomerController@getCustomerProfile');
 
-Route::put('/customers', 'CustomerController@apply');
-Route::put('/customers/address', 'CustomerController@updateCustomerAddress');
-Route::put('/customers/creditCard', 'CustomerController@updateCreditCard');
+
