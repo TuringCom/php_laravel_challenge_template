@@ -25,3 +25,12 @@ Route::group(['prefix' => 'attributes'], function () {
     Route::get('/values/{attribute_id}', 'AttributeController@getAttributeValues');
     Route::get('/inProduct/{product_id}', 'AttributeController@getProductAttributes');
 });
+
+Route::post('/customers', 'CustomerController@updateCreditCard');
+Route::post('/customers/login', 'CustomerController@login');
+
+Route::get('/customers', 'CustomerController@getCustomerProfile');
+
+Route::put('/customers', 'CustomerController@apply');
+Route::put('/customers/address', 'CustomerController@updateCustomerAddress');
+Route::put('/customers/creditCard', 'CustomerController@updateCreditCard');
