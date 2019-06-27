@@ -56,3 +56,7 @@ Route::group(['prefix' => 'categories'], function () {
     Route::get('/inDepartment/{category_id}', 'ProductController@getDepartmentCategories');
 
 });
+
+
+Route::get('/shipping/regions', 'ShippingController@getShippingRegions');
+Route::get('/shipping/regions/{shipping_region_id}', 'ShippingController@getShippingType');
