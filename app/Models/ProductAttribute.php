@@ -7,5 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class ProductAttribute extends Model
 {
     public $timestamps = false;
-    //
+
+    protected $table = 'customer';
+    protected $primaryKey = 'customer_id';
 }
