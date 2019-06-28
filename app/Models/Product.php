@@ -28,6 +28,16 @@ class Product extends Model
     protected $table = 'product';
     protected $primaryKey = 'product_id';
 
+    public static function countedAndPaginableResults(array $criteria = [])
+    {
+        return self::all();
+    }
+
+    public static function countedAndPaginableResultsWithDepartments(array $criteria = [])
+    {
+        return self::all();
+    }
+
     public function categories()
     {
         return $this->hasManyThrough(
@@ -37,6 +47,6 @@ class Product extends Model
             'category_id',
             'product_id',
             'category_id'
-            );
+        );
     }
 }
