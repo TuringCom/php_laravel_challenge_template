@@ -24,7 +24,7 @@ class AttributeController extends Controller
      */
     public function getAllAttributes()
     {
-        return response()->json(['message' => 'this works']);
+        return response()->json(['message' => 'this works'], 202);
     }
 
     /**
@@ -34,7 +34,7 @@ class AttributeController extends Controller
      */
     public function getSingleAttribute()
     {
-        return response()->json(['message' => 'this works']);
+        return response()->json(['message' => 'this works'], 205);
     }
 
     /**
@@ -44,7 +44,7 @@ class AttributeController extends Controller
      */
     public function getAttributeValues()
     {
-        return response()->json(['message' => 'this works']);
+        return response()->json(['message' => 'this works1']);
     }
 
     /**
