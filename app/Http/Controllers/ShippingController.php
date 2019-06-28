@@ -33,6 +33,6 @@ class ShippingController extends Controller
      */
     public function getShippingType($type_id)
     {
-        return response()->json(['success' => true, 'shipping' => Shipping::where('shipping_type_id', $type_id)->all()]);
+        return response()->json(['success' => true, 'shipping' => Shipping::where('shipping_region_id', $type_id)->first()]);
     }
 }
