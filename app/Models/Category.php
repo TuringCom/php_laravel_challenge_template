@@ -1,15 +1,15 @@
 <?php
 
-namespace Turing\Models;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
 /**
  * Class Category
- * @package Turing\Models
+ * @package App\Models
  * @property  int $category_id
  * @property string $name
- * @property \Turing\Models\Department $department
+ * @property \App\Models\Department $department
  *
  */
 class Category extends Model

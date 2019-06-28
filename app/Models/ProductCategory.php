@@ -1,13 +1,13 @@
 <?php
 
-namespace Turing;
+namespace App;
 
 use CoenJacobs\EloquentCompositePrimaryKeys\HasCompositePrimaryKey;
 use Illuminate\Database\Eloquent\Model;
 
 /**
  * Class ProductCategory
- * @package Turing
+ * @package App
  * @param int $product_id
  * @param int $category_id
  *

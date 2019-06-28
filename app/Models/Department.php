@@ -1,12 +1,12 @@
 <?php
 
-namespace Turing\Models;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
 /**
  * Class Department
- * @package Turing\Models
+ * @package App\Models
  * @property int $department_id
  * @property string $name
  *

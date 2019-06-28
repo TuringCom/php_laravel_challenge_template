@@ -1,14 +1,14 @@
 <?php
 
-namespace Turing\Models;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
-use Turing\ProductCategory;
+use App\ProductCategory;
 
 /**
  * Class Product
- * @package Turing\Models
+ * @package App\Models
  * @property int $product_id
  * @property string $name
  * @property string $description

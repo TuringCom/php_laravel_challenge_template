@@ -13,12 +13,6 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
-
-
 Route::group(['prefix' => 'attributes'], function () {
     Route::get('/', 'AttributeController@getAllAttributes');
     Route::get('/{attribute_id}', 'AttributeController@getSingleAttribute');

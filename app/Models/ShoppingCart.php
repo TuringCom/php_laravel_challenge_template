@@ -1,13 +1,13 @@
 <?php
 
-namespace Turing\Models;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Turing\User;
+use App\User;
 
 /**
  * Class ShoppingCart
- * @package Turing\Models
+ * @package App\Models
  * @property int $item_id
  * @property int $cart_id
  * @property int $product_id
@@ -16,7 +16,7 @@ use Turing\User;
  * @property boolean $buy_now
  * @property string $added_on
  * @property int $customer_id
- * @property \Turing\User $user
+ * @property \App\User $user
  */
 class ShoppingCart extends Model
 {
