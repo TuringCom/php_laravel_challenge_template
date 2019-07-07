@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Turing\Models\Department;
-use Turing\Models\Product;
+use App\Models\Department;
+use App\Models\Product;
 
 /**
  * The Product controller contains all methods that handles product request
