@@ -1,5 +1,5 @@
 FROM gcr.io/turing-230020/turing_challenge_db_image:0.1
-#FROM turing_challenge_db_image
+MAINTAINER Alexey Borovkov <alexey.b@turing.com>
 
 RUN apt-get update && apt-get install -y \
     apt-utils \
