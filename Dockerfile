@@ -1,5 +1,5 @@
-#FROM gcr.io/turing-230020/turing_challenge_db_image:0.1
-FROM turing_challenge_db_image
+FROM gcr.io/turing-230020/turing_challenge_db_image:0.1
+#FROM turing_challenge_db_image
 
 RUN apt-get update && apt-get install -y \
     apt-utils \
@@ -10,7 +10,6 @@ RUN apt-get update && apt-get install -y \
     lsb-release \
     ca-certificates \
     less
-
 
 
 RUN wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg && \
@@ -29,19 +28,19 @@ RUN apt-get update && \
     php7.2-mbstring \
     php7.2-mysql \
     php7.2-xml \
-    php7.2-zip
+    php7.2-zip \
+    sudo
 
 RUN curl --silent --show-error https://getcomposer.org/installer | php && \
     mv composer.phar /usr/bin/composer
 
 RUN mkdir /var/www/laravel
-#WORKDIR /var/www/laravel
+WORKDIR /var/www/laravel
 
 EXPOSE 8000
-
-#ENTRYPOINT "/var/www/laravel/turing-entrypoint.sh"
-CMD ["sh", "/var/www/laravel/turing-entrypoint.sh"]
+COPY turing-entrypoint.sh /turing-entrypoint.sh
 
 
+ENTRYPOINT ["/turing-entrypoint.sh"]
 
 
