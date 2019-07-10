@@ -36,7 +36,7 @@ Check [here](https://docs.google.com/document/d/1J12z1vPo8S5VEmcHGNejjJBOcqmPrr6
 ## Using Docker 
 Build image
 
-`docker docker build -t turing_app` 
+`docker build -t turing_app .` 
 
 Run container
  
