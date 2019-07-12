@@ -37,10 +37,10 @@ RUN curl --silent --show-error https://getcomposer.org/installer | php && \
 RUN mkdir /var/www/laravel
 WORKDIR /var/www/laravel
 
+COPY . .
+RUN composer install
 EXPOSE 8000
+
 COPY turing-entrypoint.sh /turing-entrypoint.sh
 
-
 ENTRYPOINT ["/turing-entrypoint.sh"]
-
-
