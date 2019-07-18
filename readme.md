@@ -32,3 +32,12 @@ mysql -u <dbuser> -D <databasename> -p < ./database/database.sql
 ## Request and Response Object API guide for all Endpoints
 
 Check [here](https://docs.google.com/document/d/1J12z1vPo8S5VEmcHGNejjJBOcqmPrr6RSQNdL58qJyE/edit?usp=sharing)
+
+## Using Docker 
+Build image
+
+`docker build -t turing_app .` 
+
+Run container
+ 
+`docker run -p 8000:8000 -v $(pwd):/var/www/laravel turing_app`
