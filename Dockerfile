@@ -1,5 +1,12 @@
-FROM gcr.io/turing-230020/turing_challenge_db_image:0.1
+FROM mysql:5.7
 MAINTAINER Alexey Borovkov <alexey.b@turing.com>
+
+ENV MYSQL_DATABASE 'turing'
+ENV MYSQL_ROOT_PASSWORD 'root'
+ENV MYSQL_USER 'turing'
+ENV MYSQL_PASSWORD 'turing'
+
+COPY ./database/dump.sql /docker-entrypoint-initdb.d/dump.sql
 
 RUN apt-get update && apt-get install -y \
     apt-utils \
