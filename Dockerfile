@@ -46,7 +46,7 @@ WORKDIR /var/www/laravel
 
 COPY . .
 RUN composer install
-EXPOSE 8000
+EXPOSE 80
 
 COPY turing-entrypoint.sh /turing-entrypoint.sh
 
