@@ -40,4 +40,4 @@ Build image
 
 Run container
  
-`docker run -p 8000:8000 -v $(pwd):/var/www/laravel turing_app`
+`docker run -p 80:80 -v $(pwd):/var/www/laravel turing_app`
