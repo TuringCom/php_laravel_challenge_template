@@ -36,6 +36,7 @@ RUN apt-get update && \
     php7.2-mysql \
     php7.2-xml \
     php7.2-zip \
+    php7.2-curl \
     sudo
 
 RUN curl --silent --show-error https://getcomposer.org/installer | php && \
